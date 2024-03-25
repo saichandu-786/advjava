@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>var vs let</title>
+   <script type="text/javascript">
+   let x=100;
+   let y=200;
+     function add()
+     {    
+    	 var s=x+y
+    	 document.write(s)
+     }
+     add()
+  
+   </script>
+</head>
+<body>
+
+</body>
+</html>

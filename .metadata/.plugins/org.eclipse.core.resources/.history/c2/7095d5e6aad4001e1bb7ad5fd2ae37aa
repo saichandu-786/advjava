@@ -1,0 +1,20 @@
+ let username='chandu'
+ let age=23
+ let height=5.8
+ let isRainning=true
+ const Dob="31-07-2003"
+ const aadhar=8384918263637247n
+ const mobile=9392954663
+ var company
+ 
+ console.log("username..."+ +username+"type is "+typeof(username))
+  console.log("user age..."+ +age+"type is "+typeof(age))
+   console.log("user height..."+ +height+"type is "+typeof(height))
+    console.log("user isRaining..."+ +isRainning+"type is "+typeof(isRainning))
+     console.log("user Dob..."+ +Dob+"type is "+typeof(Dob))
+      console.log("user aadhar..."+ +aadhar+"type is "+typeof(aadhar))
+       console.log("user mobile..."+ +mobile+"type is "+typeof(mobile))
+        console.log("user company..."+ +company+"type is "+typeof(company))
+ 
+       
+ 

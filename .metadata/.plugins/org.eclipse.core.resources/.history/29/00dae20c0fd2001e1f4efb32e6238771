@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body bgcolor="biege" align="center">
+	<form method="post" action="FirstServlet">
+		<h1 style="color: blue;">User Registration Form....</h1>
+		<label>User Name </label>	
+		<input type="="text" name="username" required/>
+		<br><br>
+		<label>age</label>
+		<input type="number" name="age" required/>
+		<br><br>
+                <input type="submit" value="next">
+</form>
+  </body>
+</html>

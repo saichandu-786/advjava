@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+      <title>Registration form....</title>
+    </head>
+    <body bgcolor="lightgreen">
+      <form method="get" action="RegServlet">
+          <h1> Registration process..</h1>
+   	   <label>Username:</label>
+	   <input type="text" name="username" placeholder="enter username" required>
+          <br><br>
+           <label>password:</label>
+	   <input type="password" name="password" placeholder="enter password" required>
+          <br><br>
+	  <label>gender:</label>
+	   <input type="radio" name="gender" value="male">MALE
+          <input type="radio" name="gender" value="female">FEMALE
+          <br><br>
+         <label>DOB:</label>
+	  <input type="date" name="dob">
+         <br><br>
+         <label>phone no:</label>
+         <input type="number" name="phone">
+         <br><br>
+         <label>Email:</label>
+         <input type="email" name="email">
+         <br><br>
+         <label>Nationality:</label>
+         <select name="country">
+           <option>india</option>
+	   <option>iran</option>
+	   <option>turkey</option>
+	   <option>italy</option>
+	   <option>france</option>
+         </select>
+          <br><br>
+          <label>Qualifications:</label>
+         <input type="checkbox" name="qualification" value="BA">BA
+          <input type="checkbox" name="qualification" value="BCOM">BCOM
+ 	  <input type="checkbox" name="qualification" value="BSc">BSc
+	  <input type="checkbox" name="qualification" value="BCA">BCA
+	  <input type="checkbox" name="qualification" value="BTech">BTech
+          <br><br>
+         <label>Languages known:</label>
+          <select name="language" size='3' multiple>
+              <option>telugu</option>
+	     <option>english</option>
+	      <option>hindi</option>
+	     <option>tamil</option>
+	      <option>malayalam</option>
+         </select>
+          <br><br>
+         <label> your comments:</label>
+             <textarea name="comment" rows='5' coloumns='25'></textarea>
+           <br><br>
+         <input type="submit" value="registration"></textarea>
+         </form>
+      </body>
+ </html>

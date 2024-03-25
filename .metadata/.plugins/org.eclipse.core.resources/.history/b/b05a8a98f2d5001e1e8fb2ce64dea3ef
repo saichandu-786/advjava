@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dollartoinr</title>
+
+<script type="text/javascript" src="dollartoinr.js"></script>
+
+</head>
+<body bgcolor="biege" align="center">
+    <form>
+    <label style="color:blue;">enter dollar:</label>
+    <input type="text" id="dollar" oninput="dollartoinr()" required/>
+    <br><br>
+    <label>INR:</label>
+    <input type="text" id="inr" readonly/>
+    
+    </form>
+</body>
+</html>

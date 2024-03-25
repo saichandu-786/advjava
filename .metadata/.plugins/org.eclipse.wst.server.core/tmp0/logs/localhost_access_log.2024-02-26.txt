@@ -1,0 +1,15 @@
+127.0.0.1 - - [26/Feb/2024:15:20:47 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:20:49 +0530] "GET /LoginApp/ HTTP/1.1" 404 764
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:20:51 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:20:57 +0530] "GET /LoginApp/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:21:11 +0530] "POST /LoginApp/LoginServlet HTTP/1.1" 200 167
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:21:18 +0530] "GET /LoginApp/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:21:23 +0530] "POST /LoginApp/LoginServlet HTTP/1.1" 200 554
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:22:02 +0530] "GET /LoginApp/Login.html HTTP/1.1" 200 538
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:22:11 +0530] "POST /LoginApp/SendRedirect HTTP/1.1" 808 627
+127.0.0.1 - - [26/Feb/2024:15:22:51 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:22:51 +0530] "GET /LoginApp/ HTTP/1.1" 404 764
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:22:57 +0530] "GET /LoginApp/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:23:05 +0530] "POST /LoginApp/SendRedirect HTTP/1.1" 808 627
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:23:32 +0530] "GET /LoginApp/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:15:24:20 +0530] "POST /LoginApp/SendRedirect HTTP/1.1" 302 -

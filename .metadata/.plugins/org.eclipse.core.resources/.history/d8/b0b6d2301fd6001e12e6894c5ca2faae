@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>var vs let</title>
+   <script type="text/javascript">
+     
+     
+     let y=100;
+      y=200;
+     document.write(y) 
+   </script>
+</head>
+<body>
+
+</body>
+</html>

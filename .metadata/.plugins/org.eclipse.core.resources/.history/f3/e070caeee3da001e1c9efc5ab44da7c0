@@ -1,0 +1,66 @@
+package com.chandu.servlet;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.sql.Date;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+
+@WebServlet("/ProductServlet")
+@MultipartConfig
+public class ProductServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		 int proid=Integer.parseInt(request.getParameter("proid"));
+		 String proname=request.getParameter("proname");
+		 double proprice=Double.parseDouble(request.getParameter("proprice"));
+		 String probrand=request.getParameter("probrand");
+		 String promadein=request.getParameter("promadein");
+	     Date promfgdate=Date.valueOf(request.getParameter("promfgdate"));
+        Date proexpdate=Date.valueOf(request.getParameter("proexpdate"));
+        Part part=request.getPart("proimage");
+        InputStream proimage=part.getInputStream();
+       
+        response.setContentType("text/html");
+        PrintWriter writer=response.getWriter();
+         
+        Product product=new Product();
+        product.setProid(proid);
+        product.setProname(proname);
+        product.setProprice(proprice);
+        product.setProbrand(probrand);
+        product.setPromadein(promadein);
+        product.setPromfgdate(promfgdate);
+        product.setProexpdate(proexpdate);
+        product.setProimage(proimage);
+        
+        ProductDao productDao=new ProductDao();
+				
+	    int result =save(product);	
+			
+		writer.println("data inserted successfully"+result);
+	        
+        
+
+
+        
+	}
+	private int save(Product product) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	}
+
+

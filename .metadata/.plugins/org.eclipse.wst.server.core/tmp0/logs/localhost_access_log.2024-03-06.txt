@@ -1,0 +1,17 @@
+127.0.0.1 - - [06/Mar/2024:15:21:16 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:21:18 +0530] "GET /ProductManagement/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:21:20 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:22:17 +0530] "POST /ProductManagement/ProductServlet HTTP/1.1" 500 29
+127.0.0.1 - - [06/Mar/2024:15:31:18 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:31:40 +0530] "POST /ProductManagement/ProductServlet HTTP/1.1" 500 1393
+127.0.0.1 - - [06/Mar/2024:15:34:59 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:35:17 +0530] "POST /ProductManagement/ProductServlet HTTP/1.1" 500 1393
+127.0.0.1 - - [06/Mar/2024:15:38:29 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:38:58 +0530] "POST /ProductManagement/ProductServlet HTTP/1.1" 500 1393
+127.0.0.1 - - [06/Mar/2024:15:45:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:15:46:20 +0530] "POST /ProductManagement/ProductServlet HTTP/1.1" 500 1393
+127.0.0.1 - - [06/Mar/2024:18:02:08 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:18:02:12 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:18:02:33 +0530] "GET /ProductManagement/ HTTP/1.1" 200 3557
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:18:02:33 +0530] "GET /ProductManagement/bg.jpg.jpg HTTP/1.1" 200 3558
+0:0:0:0:0:0:0:1 - - [06/Mar/2024:18:02:35 +0530] "GET /ProductManagement/ HTTP/1.1" 304 -

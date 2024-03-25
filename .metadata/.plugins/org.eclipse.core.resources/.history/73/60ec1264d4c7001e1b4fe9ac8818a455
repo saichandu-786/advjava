@@ -1,0 +1,112 @@
+package com.chandu.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/NumberServlet")
+public class NumberServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		//Step1:Read the data
+				int n1=Integer.parseInt(request.getParameter("first"));
+				int n2=Integer.parseInt(request.getParameter("last"));
+				String operation=request.getParameter("operation");
+				//Step2:Process the data
+				ArrayList<Integer> l=new ArrayList<Integer>();
+				
+				switch(operation) {
+				case"even":for(int i=n1;i<=n2;i++)
+				{ 
+					if(i%2==0)
+					{
+						l.add(i);	
+					}
+				}
+					break;
+				case"odd":for(int i=n1;i<=n2;i++) 
+				{
+					if(i%2!=0) 
+					{
+						l.add(i);
+					}
+				}
+					break;
+				case"prime":boolean flag=false;
+				for(int i=n1;i<=n2;i++) 
+				{
+					
+					for(int j=2;j<=i/2;j++)
+					{
+						if(i%j==0) 
+						{
+							flag=true;
+							break;
+						}
+					}
+					if(flag==false)
+					{
+						l.add(i);
+					}
+				}
+				break;
+				case "Perfect":
+					for(int i=n1;i<=n2;i++) {
+						int sum=0;
+						for(int j=1;j<i;j++) {
+							 if(i%j==0) {
+								 sum=sum+j;
+							 }
+						}
+						if(sum==i)
+							l.add(sum);
+					}
+					break;
+				case "Strong":
+					for(int i=n1;i<=n2;i++) {
+						int temp=i;
+						int rem=1;
+						int result=1;
+						int result1=0;
+						while(temp>0) {
+							rem=temp%10;
+							temp=temp/10;
+							result=1;
+							while (rem>0) {
+							result=result*rem;
+							rem--;
+							}
+							result1=result1+result;
+						}
+						if(result1==i)
+							l.add(i);
+					}
+					break;
+
+
+				}
+				//Step3:Render the data
+				response.setContentType("text/html");
+				PrintWriter writer = response.getWriter();
+				writer.println("<html>");
+				writer.println("<h1>generate numbers..</h1>");
+				writer.println("<body bgcolor=magenta>");
+				writer.println("<h2>Generate Numbers Result</h2>");
+				writer.println("The "+operation+" numbers between "+n1+" and "+n2+" are: "+l);
+				writer.println("</body>");
+				writer.println("</html>");
+		}
+
+	
+	}
+

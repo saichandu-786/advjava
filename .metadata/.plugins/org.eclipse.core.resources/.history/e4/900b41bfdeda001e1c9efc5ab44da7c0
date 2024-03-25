@@ -1,0 +1,77 @@
+package com.chandu.servlet;
+
+
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+public class ProductDao {
+	 public static int save(Product product) throws SQLException
+	 {
+		 Connection connection=null;
+		 PreparedStatement preparedStatement=null;
+		 int saveresult=0;
+		 try {
+			 connection=DbConnection.createConnection();
+			 preparedStatement=connection.prepareStatement("insert into product_data values(?,?,?,?,?,?,?,?)");
+			 
+	        preparedStatement.setInt(1,product.getProid());	
+	        preparedStatement.setString(2,product.getProname());
+	        preparedStatement.setDouble(3,product.getProprice());
+	        preparedStatement.setString(4,product.getProbrand());
+	        preparedStatement.setString(5,product.getPromadein());
+	        preparedStatement.setDate(6,product.getPromfgdate());
+	        preparedStatement.setDate(7,product.getProexpdate());
+	        preparedStatement.setBinaryStream(8,product.getProimage());
+	        
+	         saveresult=preparedStatement.executeUpdate();
+		 }
+		 catch(SQLException e)
+		 {
+			 e.printStackTrace();
+		 }
+		 finally
+		 {
+		
+			if( preparedStatement!=null)
+					preparedStatement.close();
+			 if( connection!=null)
+				 connection.close();
+	
+		 }
+		return saveresult;
+		 
+	 }
+	
+	/*public List<Product> findAll() 
+	{
+		try(Connection connection=DbConnection.createConnection();
+			Statement statement=connection.createStatement();)
+		{
+			ResultSet resultSet=statement.executeQuery("select * from product_data");
+			
+			while(resultSet.next())
+			{
+				Product product=new Product();
+				product.setProid(resultSet.getInt(1));
+				product.setProname(resultSet.getString(2));
+				product.setProprice(resultSet.getDouble(3));
+				product.setProbrand(resultSet.getString(4));
+				product.setPromadein(resultSet.getString(5));
+				product.setPromfgdate(resultSet.getDate(6));
+				product.setProexpdate(resultSet.getDate(7));
+				product.setProimage(resultSet.getBinaryStream(8));
+			}
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+		}
+		return null;*/
+		
+	}
+
+}

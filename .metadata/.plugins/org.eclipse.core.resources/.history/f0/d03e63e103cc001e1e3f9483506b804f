@@ -1,0 +1,102 @@
+package jdbcConnection;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class EmployeeDao 
+{   
+/*	public static Employee findById(int Id)
+	{
+	
+	Employee employee=null;
+
+	//try-with resources
+	try( Connection connection=DbConnection.createConeection();
+			PreparedStatement	preparedStatement=connection.prepareStatement("select * from per where Id=?")){ 
+		// set the parameter	
+					preparedStatement.setInt(1,Id);
+			ResultSet resultSet=preparedStatement.executeQuery();
+			
+			if(resultSet.next())
+			{
+				employee=new Employee();
+				
+				employee.setId(resultSet.getInt(1));
+				employee.setName(resultSet.getString(2));
+				employee.setSalary(resultSet.getDouble(3));
+			}
+			
+	
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+   return employee;
+	}
+}  */
+	
+	
+	
+		public  int save(Employee per)
+		{
+			// declare the resources
+			Connection connection=null;
+			PreparedStatement preparedStatement=null;
+			int count=0;
+			
+			try {
+				connection=DbConnection.createConeection();
+				
+				preparedStatement=connection.prepareStatement("insert into per values(?,?,?);");
+				
+				//read the from per object and set to parameters
+				preparedStatement.setInt(1,per.getId());
+				preparedStatement.setString(2,per.getName());
+				preparedStatement.setDouble(3,per.getSalary());
+				count=preparedStatement.executeUpdate();
+			}
+			catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+			finally
+			{
+				try {
+				// before release connection check the connection present or not
+				if(connection!=null)
+					 
+						connection.close();
+					
+				
+				if(preparedStatement!=null)
+			 
+						preparedStatement.close();
+				
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+			}
+		return count;
+		
+		}
+
+		}			
+		
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

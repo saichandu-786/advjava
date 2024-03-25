@@ -1,0 +1,41 @@
+package jdbcConnection;
+public class DatabaseClient {
+
+	public static void main(String[] args) 
+	{
+	
+		
+		EmployeeDao employeeDao=new EmployeeDao();
+		int res1=employeeDao.save(new Employee(111,"chandu",60000));
+		System.out.println("data inserted successfully...."+res1);
+		
+		int res2=employeeDao.save(new Employee(222,"mani",55000));
+		System.out.println("data inserted successfully...."+res2);
+		
+		
+		
+		// findbyid() method
+		/*Employee per=EmployeeDao.findById(111);
+		System.out.println(per);
+      */
+		
+		// for deletebyid() method
+		/*int deletecount=EmployeeDao.deleteById(111);
+		if(deletecount==1)
+		{
+			System.out.println("data deleted successfully.."+deletecount);
+		}
+		else
+		{
+			System.out.println("data deletion not succeed");
+		}*/
+		
+		
+		// deleteby salary()method
+		
+		/*int deletecount=EmployeeDao.deleteBySalary(50000);
+		System.out.println("records deleted successfully.."+deletecount);
+		*/
+	}
+	
+}

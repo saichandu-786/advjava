@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+   function checkpalindrome()
+   {
+	   let 
+   }
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+    <form>
+    <label>enter palindrome:</label>
+    <input type="text" id="palindrome">
+    <br><br>
+    <button type="button" onclick="chechpalindrome()">check palindrome</button>
+    </form>
+
+</body>
+</html>
